@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "GitHub Gist Creator",
+    "version": "1.0",
+    "description": "Create GitHub Gists from selected or full page HTML",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "contextMenus",
+      "scripting"
+    ],
+    "host_permissions": [
+      "https://*/*",
+      "http://*/*"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "128": "icon.png"
+      }
+    },
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": true
+    },
+    "icons": {
+      "128": "icon.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }

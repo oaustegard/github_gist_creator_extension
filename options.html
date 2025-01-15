@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Gist Creator Settings</title>
+    <style>
+        body {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 { margin-top: 0; }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+        .help-text {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background: #2ea44f;
+            color: white;
+        }
+        button.secondary {
+            background: #dc3545;
+            margin-left: 10px;
+        }
+        .status {
+            margin-top: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            display: none;
+        }
+        .success { background: #e6ffe6; color: #2ea44f; }
+        .error { background: #ffe6e6; color: #dc3545; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GitHub Gist Creator Settings</h1>
+        <div class="input-group">
+            <label for="token">GitHub Personal Access Token</label>
+            <input type="password" id="token">
+            <p class="help-text">
+                Requires a GitHub token with 'gist' scope. 
+                <a href="https://github.com/settings/tokens" target="_blank">Create one here</a>
+            </p>
+        </div>
+        <div>
+            <button id="saveToken">Save Token</button>
+            <button id="clearToken" class="secondary">Clear Token</button>
+        </div>
+        <div id="status" class="status"></div>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>
